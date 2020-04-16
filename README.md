@@ -3,7 +3,7 @@
 
 针对校园中快递代取服务
 
-![avatar](introImg/intro.png)
-![avatar](introImg/search.png)
-![avatar](introImg/submit.png)
-![avatar](introImg/aboutme.png)
+![avatar](introImg/intro.PNG)
+![avatar](introImg/search.PNG)
+![avatar](introImg/submit.PNG)
+![avatar](introImg/aboutme.PNG)
