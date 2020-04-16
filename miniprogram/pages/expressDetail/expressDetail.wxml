@@ -1,0 +1,30 @@
+<!-- banner -->
+<view class='toast-out' wx:if='{{isShow}}'>
+  <view class='toast-in'>
+    <span class='iconfont {{iconClass}}'></span>
+    <view class='toast-txt'>
+      {{txt}}
+    </view>
+  </view>
+</view>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" mode="aspectFit" data-src="{{item}}" bindtap="previewImage"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<scroll-view scroll-y="true">
+  <view class="detail">
+    <text class="title" decode="{{true}}">&ensp;&ensp;&ensp;您好！欢迎查看我的快递信息！我叫{{name}}，在{{building}}，是一名{{gender}}生。我的快递信息如下，如果愿意帮我代取，请点击下方“我要代取”后，通过上面的二维码联系我给您授权，即可获得我的快递取件码，证件，手机号等具体信息哟！</text>
+    <text class='item'>快递位置：{{location}}</text>
+    <text class='item'>快递公司：{{company}}</text>
+    <text class='item'>快递大小：{{size}}</text>
+
+  </view>
+
+</scroll-view>
+<!-- 底部悬浮栏 -->
+<view class="detail-nav">
+  <button class="button-red" bindtap="immeBuy" formType="submit">我要代取</button>
+</view>

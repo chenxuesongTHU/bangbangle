@@ -1,0 +1,41 @@
+<!--pages/helpOthers/helpOthers.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title title">我在帮谁取快递</view>
+    <view class='desc'> 您可取的快递信息如下，“未授权”点击后可查看对方二维码，可代取的快递点击“查看“可获得对方的证件信息。好人一生平安！</view>
+  </view>
+
+  <view class="page__bd">
+
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__bd">
+        <view wx:for="{{itemList}}" class="weui-media-box mdfyright" data-item="item" wx:key="index">
+          <view class="weui-media-box_appmsg">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+              <image class="weui-media-box__thumb" src="{{item.profileUrl}}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">{{item.name}} {{item.gender}} {{item.building}}</view>
+              <view class="weui-media-box__desc">{{item.locationIndex}} {{item.expressCompanyIndex}} {{item.colorIndex}}{{item.stringCode}}</view>
+              <view class="weui-media-box__desc">{{item.phone}} </view>
+              <view class="weui-media-box__desc">{{item.insertTime}} {{item.sizeIndex}}</view>
+            </view>
+            <view bindtap='onCheck' class='check' data-index='{{index}}'>
+            {{item.slogan}}
+            </view>
+          </view>
+        </view>
+
+      </view>
+
+    </view>
+
+  </view>
+
+  <view class="item_list" wx:for="{{imgList}}" data-item='item' wx:key="index">
+    <view class="item_book_text">{{item.title}}</view>
+    <image class="item_book_img" mode="widthFill" src="{{item.url}}" data-index="{{index}}" bindtap="previewImg"></image>
+  </view>
+
+
+</view>

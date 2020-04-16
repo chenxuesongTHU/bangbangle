@@ -1,0 +1,72 @@
+<view class="page">
+
+
+  <view class="item-title">快递信息填写</view>
+
+  <view class="weui-cells weui-cells_after-title">
+
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">位置</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker value="{{locationIndex}}" range="{{location}}" bindchange="bindLocationChange">
+          <view class="weui-input">{{location[locationIndex]}}</view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">快递公司</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker value="{{expressCompanyIndex}}" range="{{expressCompany}}" bindchange="bindCompanyChange">
+          <view class="weui-input">{{expressCompany[expressCompanyIndex]}}</view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">颜色标识</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker value="{{colorIndex}}" range="{{color}}" bindchange="bindColorChange">
+          <view class="weui-input">{{color[colorIndex]}}</view>
+        </picker>
+      </view>
+    </view>
+
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">快递取件码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" bindinput="bindStringCodeInput" placeholder="如A888" />
+      </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">快递大小</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker value="{{sizeIndex}}" range="{{size}}" bindchange="bindSizeChange">
+          <view class="weui-input">{{size[sizeIndex]}}</view>
+        </picker>
+      </view>
+    </view>
+
+
+  </view>
+
+
+  <view class="weui-cells__tips">公开展示信息有快递所在位置、快递公司和快递大小，其他信息当您授权后会提供给代取人员。</view>
+
+
+
+  <button type="primary" bindtap="OnSubmitExpressInfo">提交</button>
+</view>

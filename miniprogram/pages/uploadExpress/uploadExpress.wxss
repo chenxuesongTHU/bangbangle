@@ -1,0 +1,47 @@
+/* pages/uploadExpress/uploadExpress.wxss */
+
+@import "../../style/weui.wxss";
+
+.item-title{
+  position: relative;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.item-input-view{
+  position: relative;
+  padding-top: 10px;
+  padding-left: 15px;
+  text-align: left;
+  font-size: 18px;
+  width: 70%;
+  float: left;
+}
+
+.weui-form-preview{
+    margin-bottom: 25px;
+}
+.new-vote-select-date {
+    float: left;
+}
+.new-vote-select-time {
+    margin-left: 20rpx;
+    float: left;
+}
+.text-font-my-family {
+    font-family: SimHei;
+}
+
+.inline{
+  padding-right: 5%;
+  padding-bottom: 1rpx;
+}
+
+.fit-width{
+  width: 61%;
+  font-size: 28rpx;
+  text-align: left;
+}

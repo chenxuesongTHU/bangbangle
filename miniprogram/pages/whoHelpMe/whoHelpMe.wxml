@@ -1,0 +1,51 @@
+<!--pages/whoHelpMe/whoHelpMe.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title title">谁在帮我取快递</view>
+    <view class='desc'> 点击"授权"后，对方可查看到您的手机号，证件照片，快递取件码等信息</view>
+  </view>
+
+  <view class="page__bd">
+
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__bd">
+        <view wx:for="{{itemList}}" class="weui-media-box mdfyright" data-item="item" wx:key="index">
+          <view class="weui-media-box_appmsg" data-index="{{index}}">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+              <image class="weui-media-box__thumb" src="{{item.profileUrl}}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">代取人：{{item.name}} {{item.gender}}</view>
+              <view class="weui-media-box__desc">代取的我的快递的信息：</view>
+              <text class="weui-media-box__desc" decode="{{true}}">&ensp;&ensp;&ensp;{{item.locationIndex}} {{item.expressCompanyIndex}} {{item.sizeIndex}}</text>  
+            </view>
+
+            <view bindtap='onToAuthorize' class='allow_help' data-index='{{index}}'>
+            {{item.slogan}}
+            </view>
+
+          </view>
+        </view>
+
+      </view>
+
+    </view>
+
+  </view>
+
+
+  <!-- <navigator url="../addUserInfo/addUserInfo" open-type="navigate" class="uploader-text">
+    <text>添加用户信息</text>
+  </navigator>
+
+  <navigator url="../expressDetail/expressDetail" open-type="navigate" class="uploader-text">
+    <text>查看快递详情</text>
+  </navigator> -->
+
+  <view class="item_list" wx:for="{{imgList}}" data-item='item' wx:key="index">
+    <view class="item_book_text">{{item.title}}</view>
+    <image class="item_book_img" mode="widthFill" src="{{item.url}}" data-index="{{index}}" bindtap="previewImg"></image>
+  </view>
+
+
+</view>

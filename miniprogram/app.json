@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/uploadExpress/uploadExpress",
+    "pages/viewInfo/viewInfo",
+    "pages/myInfo/myInfo",
+    "pages/addUserInfo/addUserInfo",
+    "pages/addUserInfo2/addUserInfo2",
+    "pages/modifyUserInfo/modifyUserInfo",
+    "pages/expressDetail/expressDetail",
+    "pages/whoHelpMe/whoHelpMe",
+    "pages/helpOthers/helpOthers"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "帮帮乐",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/uploadExpress/uploadExpress",
+        "text": "上传",
+        "iconPath": "images/upload.jpg",
+        "selectedIconPath": "images/upload.jpg"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "发现",
+        "iconPath": "images/info.jpg",
+        "selectedIconPath": "images/info.jpg"
+      },
+      {
+        "pagePath": "pages/myInfo/myInfo",
+        "text": "我的",
+        "iconPath": "images/my.jpg",
+        "selectedIconPath": "images/my.jpg"
+      }
+    ]
+  }
+}

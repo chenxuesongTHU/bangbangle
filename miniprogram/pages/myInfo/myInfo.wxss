@@ -1,0 +1,154 @@
+/* pages/myInfo/myInfo.wxss */
+@import "../../style/weui.wxss";
+
+page {
+  /* background: #f6f6f6; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.userinfo, .uploader, .tunnel {
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+  height: 100rpx;
+  width: 100%;
+  background: #fff;
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+}
+
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+
+.userinfo-avatar:after {
+  border: none;
+}
+
+.userinfo-nickname {
+  font-size: 32rpx;
+  color: #007aff;
+  background-color: white;
+  background-size: cover;
+}
+
+.userinfo-nickname::after {
+  border: none;
+}
+
+.small-font {
+  font-size: 25rpx;
+  margin-top: 1rpx;
+  color: #5b5b5b;
+}
+
+.gender-class {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 8rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+
+.top-item-class {
+  margin-left: 40rpx;
+  margin-top: 100rpx;
+  display: flex;
+}
+
+.last-item-class {
+  margin-left: 40rpx;
+  margin-top: 35rpx;
+  margin-bottom: 80rpx;
+  display: flex;
+}
+
+
+.all-item {
+  height: 180rpx;
+}
+
+.title-image{
+  height: auto;
+}
+
+.image-title{
+  margin-top: 50rpx;
+  font-size: 40rpx;
+  margin-left: 30rpx;
+  color:  #5b5b5b;
+}
+
+.pure-image-class{
+  width: 90%;
+  align-content: center;
+  margin-left: 5%;
+  border-radius: 5%;
+  border-width: 2rpx;
+  border-color: black;
+  border-style: dotted;
+  background-size: cover;
+  background-color: white;
+}
+
+.modify{
+  margin-top: 30rpx;
+  margin-bottom: 40rpx;
+}
+
+.scroll_box{
+width: 100%;
+overflow: hidden;
+padding: 20rpx;
+background: #fff;
+white-space: nowrap;
+}
+.item_list{
+width: 100%;
+height: auto;
+margin-right: 8%;
+margin-left: 5%;
+display: inline-block;
+text-align: center;
+}
+
+.item_book_text{
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.item_book_img{
+  border-radius: 5%;
+  border-width: 5rpx;
+  border-color: black;
+  border-style: dotted;
+  background-size: cover;
+  background-color: white;
+}
+
+.weui-grid__icon {
+display:block;
+width:100rpx;
+height:100rpx;
+margin:0 auto;
+
+}
+
+.notice{
+  align-self: center;
+  font-size: 28rpx;
+  margin-top: 1rpx;
+  color: #5b5b5b;
+}

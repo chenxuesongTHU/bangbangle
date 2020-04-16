@@ -1,0 +1,68 @@
+<!--pages/findInfo/findInfo.wxml-->
+<!-- 遮罩层设置 -->
+<view class="b1" hidden="{{flag}}">
+  <view class="b2" bindtap="closeMask">
+    <image class="intro-img" src='{{introImgUrl}}' />
+  </view>
+  <view class="t_w">
+    <view class="t_image" bindtap="closeMask">
+      <cover-image src="../../images/quit.png"></cover-image>
+    </view>
+  </view>
+</view>
+
+<view class="page">
+  <view class="page__hd row-style">
+    <view style='width:60%'>
+      <view class="page__title title">发现更多快递信息</view>
+      <view class='desc'> 点击条目查看详细信息</view>
+    </view>
+    <view style='width:40%; text-align:right;'>
+      <view class='about-me-div' bindtap='showMask'>
+        <image class='about-me' src='../../images/about.jpg'></image>
+        <text class='intro-style'>介绍</text>
+      </view>
+    </view>
+
+  </view>
+
+
+  <view class="page__bd">
+
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__bd">
+        <view wx:for="{{itemList}}" class="weui-media-box" data-item="item" wx:key="index">
+          <view bindtap="onNavigateToDetail" class="weui-media-box_appmsg" data-index="{{index}}">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+              <image class="weui-media-box__thumb" src="{{item.profileUrl}}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">{{item.name}} {{item.gender}} {{item.building}}</view>
+              <view class="weui-media-box__desc">{{item.locationIndex}} {{item.expressCompanyIndex}} {{item.sizeIndex}}</view>
+              <view class="weui-media-box__desc">{{item.insertTime}}</view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+
+    </view>
+
+  </view>
+
+
+  <!-- <navigator url="../addUserInfo/addUserInfo" open-type="navigate" class="uploader-text">
+    <text>添加用户信息</text>
+  </navigator>
+
+  <navigator url="../expressDetail/expressDetail" open-type="navigate" class="uploader-text">
+    <text>查看快递详情</text>
+  </navigator> -->
+
+  <view class="item_list" wx:for="{{imgList}}" data-item='item' wx:key="index">
+    <view class="item_book_text">{{item.title}}</view>
+    <image class="item_book_img" mode="widthFill" src="{{item.url}}" data-index="{{index}}" bindtap="previewImg"></image>
+  </view>
+
+
+</view>

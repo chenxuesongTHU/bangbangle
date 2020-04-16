@@ -1,0 +1,35 @@
+/* pages/whoHelpMe/whoHelpMe.wxss */
+
+@import "../../style/weui.wxss";
+
+.title{
+  margin-left: 8%;
+  margin-top: 30rpx;
+  font-size: 46rpx;
+}
+
+.desc{
+  font-size: 28rpx;
+  color: #666565;
+  text-align: left;
+  margin-left: 18%;
+  margin-bottom: 8%;
+  margin-right: 10%;
+}
+
+.allow_help{
+  font-size: 35rpx;
+  padding: 5rpx;
+  background-color: burlywood;
+  color: white;
+  border-radius: 5rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.mdfyright{
+  padding-right: 4px;
+}

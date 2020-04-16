@@ -1,0 +1,70 @@
+<!--pages/myInfo/myInfo.wxml-->
+<view class="page">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{backgroundImgUrl}}">
+    </image>
+    <view>
+      <text>{{nickName}}\n</text>
+      <text class='small-font'>志比昆仑 学竞江河</text>
+    </view>
+  </view>
+
+  <view class='all-item'>
+    <label class='top-item-class'>姓名：{{userName}}
+      <image src='{{genderImg}}' class='gender-class'></image>
+    </label>
+    <label class='last-item-class'>目前居住在\t{{buildingNumber}}\t {{roomNumber}}\t</label>
+  </view>
+  <view style='width=100%; text-align:center'>
+    <text class='notice'>
+左右滑动查看更多
+</text>
+  </view>
+
+  <view class="scroll_box">
+    <scroll-view class="scroll-view_x" scroll-x style="width: auto;overflow:hidden;">
+      <view class="item_list" wx:for="{{imgList}}" data-item='item' wx:key="index">
+        <view class="item_book_text">{{item.title}}</view>
+        <image class="item_book_img" mode="aspectFit" src="{{item.url}}" data-index="{{index}}" bindtap="previewImg"></image>
+      </view>
+
+    </scroll-view>
+  </view>
+
+
+
+  <view class="page__bd" style='margin-bottom:50rpx;'>
+    <view class="weui-grids" style='border:0rpx'>
+      <navigator url="../whoHelpMe/whoHelpMe" class="weui-grid" hover-class="weui-grid_active" style='border:0rpx'>
+        <image class="weui-grid__icon" src="./whohelpme.jpg" style='width=35rpx; height=35rpx' />
+        <view class="weui-grid__label">谁在帮我</view>
+      </navigator>
+      <navigator url="../helpOthers/helpOthers" class="weui-grid" hover-class="weui-grid_active" style='border:0rpx'>
+        <image class="weui-grid__icon" src="./helpothers.jpg" style='width=35rpx; height=35rpx' />
+        <view class="weui-grid__label">我在帮谁</view>
+      </navigator>
+
+      <view bindtap='toModify' class="weui-grid" hover-class="weui-grid_active" style='border:0rpx'>
+        <image class="weui-grid__icon" src="./infomodify.png" style='width=35rpx; height=35rpx' />
+        <view class="weui-grid__label">修改信息</view>
+      </view>
+      <!-- <navigator url="../modifyUserInfo/modifyUserInfo" class="weui-grid" hover-class="weui-grid_active" style='border:0rpx'>
+          <image class="weui-grid__icon" src="./infomodify.png" style='width=35rpx; height=35rpx'/>
+          <view class="weui-grid__label">修改信息</view>
+        </navigator> -->
+
+    </view>
+  </view>
+
+  <!-- <navigator url='../modifyUserInfo/modifyUserInfo' open-type="navigate">
+    <button class="modify" type="primary">修改个人信息</button>
+  </navigator> -->
+
+
+<view style='text-align:right'>
+<text class='notice'>问题反馈请加微信：chenxuesong1128
+</text>
+</view>
+
+
+</view>
